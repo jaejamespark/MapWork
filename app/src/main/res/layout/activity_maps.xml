@@ -1,0 +1,47 @@
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+
+    <EditText
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="50dp"
+    android:id="@+id/addressInput"
+    android:hint="Enter work address" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:id="@+id/searchBtn"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="50dp"
+        android:text="Search"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:id="@+id/currentLocationBtn"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="50dp"
+        android:onClick="currentLocationRequestHandler"
+        android:text="Current Location"/>
+
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/map" tools:context=".MapsActivity"
+        android:name="com.google.android.gms.maps.SupportMapFragment" />
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/currentLocationBtn"
+        android:layout_toEndOf="@+id/currentLocationBtn"></GridLayout>
+
+</RelativeLayout>
